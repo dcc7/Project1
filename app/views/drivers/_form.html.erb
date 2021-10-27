@@ -1,0 +1,23 @@
+<div class = "form">
+  <%= form_for @driver, :html => {:class => "form-horizontal-center"} do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+
+    <%= f.label :team %>
+    <%= f.text_field :team%>
+
+    <%= f.label :dob %>
+    <%= f.text_field :dob %>
+
+    <%= f.label :current_ranking %>
+    <%= f.text_field :current_ranking %>
+
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

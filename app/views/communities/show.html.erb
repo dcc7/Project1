@@ -1,12 +1,34 @@
-<%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-end" %>
+<div class="row mb-4">
+  <div class="col-sm-8">
+    <h2><%= @community.name %></h2>
+  </div>
 
-<%= @community.name %>
+  <div class="col-sm-4">
+    <% if @is_subscribed %>
+      <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-end" if @is_subscribed %>
+    <% else %>
+      <%= render partial: "communities/subscribe", locals: { community_id: @community.id } %>
+    <% end %>
+  </div>
+</div>
 
-<% @posts.each do |post| %>
-  <h4><%= link_to post.title, community_post_path(@community, post) %></h4>
-  <p><%= truncate post.body, length: 200 %></p>
-<% end %>
+<div class="row">
+  <div class="col-sm-8">
+    <%= render partial: "posts/list", locals: { posts: @posts } %>
+  </div>
+  <div class="col-sm-4">
+    <div class="card p-3">
+      <h5>About</h5>
+      <p class="mt-2"><%= @community.summary %><p>
+      <p><%= pluralize @subscriber_count, "member" %></p>
+    </div>
+    <small>
+      <p><%= simple_format @community.rules %></p>
+    </small>
+  </div>
+</div>
 
-<small>
-  <p><%= simple_format @community.rules %></p>
-</small>
+<div class="controls">
+  <%= button_to "Edit Community", edit_community_path(@community.id), :method => 'get' %><br>
+  <%= button_to "Delete Community", community_path, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>

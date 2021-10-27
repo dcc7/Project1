@@ -1,0 +1,172 @@
+body {
+  text-align: center;
+  /* list-style-position: inside; */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.the-body {
+  background-color: white;
+}
+
+/* Home page logo */
+.home-logo {
+  width: 150px;
+}
+/* navigation */
+.navigation {
+}
+
+/* Home Page */
+
+.homepage-heading {
+  text-align: center;
+}
+
+.driver {
+  text-align: center;
+}
+
+/* Track and Driver page. */
+.feature {
+  max-width: 35%;
+}
+
+.logo {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.track_thumb {
+  width: 150px;
+}
+
+.driver, .track {
+  float: left;
+  width: 50%;
+}
+
+.driver_thumb {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.form {
+  display: grid;
+}
+
+.form-horizontal-center {
+  display: block;
+  margin: 0 auto;
+}
+.thumb {
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.driver-profile {
+  text-align: center;
+  list-style-position: inside;
+}
+
+.driver_image {
+  border-radius: 20px;
+}
+
+.trackstats {
+  text-align: center;
+  list-style-position: inside;
+}
+
+/* Footer */
+
+/* ==========================================
+    FOR DEMO PURPOSE
+  ========================================== */
+body {
+  /* background: #2a2e32; */
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.form-control {
+  background: #212529;
+  border-color: #545454;
+}
+
+.form-control:focus {
+  background: #212529;
+}
+
+footer {
+  background: #212529;
+  border-top-left-radius: 40px;
+}
+
+
+/* ==========================================
+    CUSTOM UTILS CLASSES
+  ========================================== */
+  body, html {
+    /* height: 100%; */
+  }
+
+
+
+/* Jumbotron */
+
+.jumbotron {
+  position:relative;
+  overflow:hidden;
+}
+
+.jumbotron .container {
+  position:relative;
+  z-index:2;
+
+  background:rgba(0,0,0,0.2);
+  padding:2rem;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius:3px;
+}
+
+.jumbotron-background {
+  object-fit:cover;
+  font-family: 'object-fit: cover;';
+  position:absolute;
+  top:0;
+  z-index:1;
+  width:100%;
+  height:100%;
+  opacity:0.5;
+}
+
+img.blur {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+
+}
+
+
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+}

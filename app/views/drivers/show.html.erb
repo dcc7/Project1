@@ -1,0 +1,24 @@
+<div class="driver-profile">
+<h1 class="pb-4"><%= @driver.name %></h1>
+
+<%= image_tag @driver.image, :class => 'feature pb-5 driver_image' %>
+
+  <ul>
+    <li><strong>Country:</strong> <%= @driver.country %></li>
+    <li><strong>Team:</strong> <%= @driver.team %></li>
+    <li><strong>Date of Birth:</strong> <%= @driver.dob.strftime '%B %e, %Y' if @driver.dob.present? %></li>
+    <li><strong>Points Total:</strong> <%= @driver.points %></li>
+    <li><strong>Podiums:</strong> <%= @driver.podiums %></li>
+    <li><strong>Current Ranking:</strong> <%= @driver.current_ranking %></li><br>
+    <p><%= @driver.bio %></p>
+    <% @driver.tracks.each do |track| %>
+      <li>Last Track Victor: <%= link_to track.name, track  %></li>
+    <% end %>
+  </ul>
+
+
+<div class="controls m-3 float-end">
+  <%= button_to "Edit Driver", edit_driver_path(@driver.id), :method => 'get' %><br>
+  <%= button_to "Delete Driver", @driver, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>
+</div>

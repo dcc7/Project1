@@ -7001,3 +7001,326 @@ Processing by Devise::RegistrationsController#update as HTML
 Completed 200 OK in 240ms (Views: 15.3ms | ActiveRecord: 1.7ms | Allocations: 14995)
 
 
+Started GET "/accounts" for 127.0.0.1 at 2021-10-25 15:09:19 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/accounts"):
+  
+Started GET "/accounts" for 127.0.0.1 at 2021-10-25 15:15:48 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/accounts"):
+  
+Started GET "/accounts" for 127.0.0.1 at 2021-10-25 15:15:49 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/accounts"):
+  
+Started GET "/accounts" for 127.0.0.1 at 2021-10-25 15:16:02 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/accounts"):
+  
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:16:04 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (1.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (1.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 8.3ms | Allocations: 3920)
+  Rendered public/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 5604)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5668)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 17.6ms | Allocations: 10777)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"profile", :username=>nil}, missing required keys: [:username]):
+    1: <div class="card p-4">
+    2:   <% @posts.each do |post| %>
+    3:     <p><small>Community <%= link_to post.community.name %>: Posted by <%= link_to post.account.full_name, profile_path(post.account.username) %> <%= time_ago_in_words post.created_at %> ago.</small></p>
+    4:     <h4><%= link_to post.title, community_post_path(post.community_id, post) %></h4>
+    5:     <p><%= truncate post.body, length: 200 %></p>
+    6:   <% end %>
+  
+app/views/posts/_list.html.erb:3
+app/views/posts/_list.html.erb:2
+app/views/public/index.html.erb:34
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:56:47 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  Rendered posts/_list.html.erb (Duration: 2.8ms | Allocations: 1098)
+  [1m[36mCommunity Load (1.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 396)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 11685)
+Completed 200 OK in 47ms (Views: 22.8ms | ActiveRecord: 15.0ms | Allocations: 16823)
+
+
+Started GET "/accounts/edit" for 127.0.0.1 at 2021-10-25 15:56:51 +1100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 213)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 10482)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.8ms | Allocations: 12749)
+
+
+Started PUT "/accounts" for 127.0.0.1 at 2021-10-25 15:57:11 +1100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"email"=>"craigsy@ga.co", "username"=>"craigsy", "first_name"=>"Craig", "last_name"=>"Sy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :username[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 663)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3658)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 396)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 11657)
+Completed 200 OK in 225ms (Views: 15.3ms | ActiveRecord: 1.6ms | Allocations: 17121)
+
+
+Started PUT "/accounts" for 127.0.0.1 at 2021-10-25 15:59:50 +1100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"email"=>"craigsy@ga.co", "username"=>"craigsy", "first_name"=>"Craig", "last_name"=>"Sy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :username[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 133)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 10011)
+Completed 200 OK in 227ms (Views: 12.6ms | ActiveRecord: 1.7ms | Allocations: 14183)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:00 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (1.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 14.7ms | Allocations: 6874)
+  [1m[36mCommunity Load (0.8ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 9460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 16658)
+Completed 200 OK in 38ms (Views: 30.9ms | ActiveRecord: 5.3ms | Allocations: 17611)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:02 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (1.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 11.5ms | Allocations: 6533)
+  [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 15435)
+Completed 200 OK in 25ms (Views: 18.6ms | ActiveRecord: 5.3ms | Allocations: 15981)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:04 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (0.9ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 12.1ms | Allocations: 6533)
+  [1m[36mCommunity Load (0.8ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 15435)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 4.5ms | Allocations: 15979)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:05 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (0.9ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 12.2ms | Allocations: 6533)
+  [1m[36mCommunity Load (0.8ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 15434)
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 4.6ms | Allocations: 15978)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:09 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (0.9ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 12.4ms | Allocations: 6533)
+  [1m[36mCommunity Load (0.8ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 15607)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 4.5ms | Allocations: 16155)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:13 +1100
+Processing by PublicController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 ORDER BY "accounts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/index.html.erb:2
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  ↳ app/views/posts/_list.html.erb:2
+  [1m[36mCommunity Load (1.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_list.html.erb:3
+  Rendered posts/_list.html.erb (Duration: 12.3ms | Allocations: 6533)
+  [1m[36mCommunity Load (0.7ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/public/index.html.erb:41
+  Rendered public/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 15438)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 4.6ms | Allocations: 15986)
+
+

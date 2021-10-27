@@ -1,0 +1,19 @@
+<h1 class="text-center"><%= @track.name %></h1>
+
+<%= image_tag @track.image, :class => 'thumb' if @track.image.present? %><br>
+
+<ul class='trackstats'>
+  <li><strong>Country:</strong> <%= @track.country %></li>
+  <li><strong>Track Type:</strong> <%= @track.track_type %> </li>
+  <li><strong>Length:</strong> <%= @track.length %>km</li>
+  <li><strong>Laps:</strong> <%= @track.race_laps %> laps</li>
+
+  <% if @track.driver.present? %>
+    <li>Last Race Winner: <%= link_to @track.driver.name, @track.driver %></li>
+  <% end %>
+</ul>
+
+<div class="controls track-options m-3 float-end">
+  <%= button_to "Edit Track", edit_track_path(@track.id), :method => 'get' %><br>
+  <%= button_to "Delete Track", track_path(@track.id), :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>

@@ -13,14 +13,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="the-body">
 
     <%= render partial: "layouts/header" %>
 
-    <section class="bg-light">
+    <section class="">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-12 pt-4">
             <%= yield %>
           </div>
         </div>
