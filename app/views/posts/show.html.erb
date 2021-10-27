@@ -10,12 +10,12 @@
 <%= form_for @comment, remote: true do |f| %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.text_area :message, placeholder: "Write your comment here", class: "form-control" %>
-  <%= f.submit "Submit comment", class: "btn btn-success mt-3" %>
+  <%= f.submit "Submit comment", class: "btn btn-success mt-3 mb-5" %>
 <% end %>
 
 <% if @post.account_id == current_account.id %>
   <div class="controls">
-    <%= button_to 'Edit Post', edit_community_post_path(@post.id), :method => "get" %>
-    <%= button_to 'Delete Post', community_post_path(@post.id), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+    <%= button_to 'Edit Post', edit_community_post_path(@post.id), :method => "get", class: "btn btn-outline-primary mb-3 float-end" %>
+    <%= button_to 'Delete Post', community_post_path(@post.id), :method => 'delete', class: "btn btn-outline-primary mb-5 float-end", :data => { :confirm => 'Are you sure?' } %>
   </div>
 <% end %>

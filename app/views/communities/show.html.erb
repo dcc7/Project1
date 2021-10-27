@@ -29,6 +29,6 @@
 </div>
 
 <div class="controls">
-  <%= button_to "Edit Community", edit_community_path(@community.id), :method => 'get' %><br>
-  <%= button_to "Delete Community", community_path, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+  <%= button_to "Edit Community", edit_community_path(@community.id), :method => 'get', class: "btn btn-outline-primary float-end mt-5 mb-5" %>
+  <%= button_to "Delete Community", community_path, :method => 'delete', class: "btn btn-outline-primary float-end mt-5 mb-5", :data => { :confirm => 'Are you sure?'} %>
 </div>

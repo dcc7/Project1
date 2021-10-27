@@ -22,10 +22,12 @@ body {
 
 .homepage-heading {
   text-align: center;
+  background-color: #DD2D2D;
 }
 
 .driver {
   text-align: center;
+
 }
 
 /* Track and Driver page. */
@@ -40,7 +42,8 @@ body {
 }
 
 .track_thumb {
-  width: 150px;
+  width: 10px;
+  height: 100px;
 }
 
 .driver, .track {
@@ -49,7 +52,7 @@ body {
 }
 
 .driver_thumb {
-  width: 120px;
+  width: 170px;
   border-radius: 50%;
 }
 
@@ -167,6 +170,6 @@ img.blur {
 
 /* footer */
 .footer {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
 }

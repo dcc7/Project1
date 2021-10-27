@@ -2,10 +2,10 @@
 
 <% @drivers.each do |driver| %>
   <%# <%= image_tag driver.image, :class => 'feature' if driver.image.present? %>
-  <p class = "driver pb-3">
-    <%= link_to image_tag(driver.image, :class => 'driver_thumb'), driver_path(driver.id) %><br>
+  <h5 class = "driver pb-3">
+    <%= link_to image_tag(driver.image, :class => 'driver_thumb pb-3'), driver_path(driver.id) %><br>
     <%= link_to driver.name, driver_path(driver.id) %><br>
     Current Season Ranking: <%= driver.current_ranking %>
-  </p>
+  </h5>
 
 <% end %>

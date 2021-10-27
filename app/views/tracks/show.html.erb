@@ -14,6 +14,6 @@
 </ul>
 
 <div class="controls track-options m-3 float-end">
-  <%= button_to "Edit Track", edit_track_path(@track.id), :method => 'get' %><br>
-  <%= button_to "Delete Track", track_path(@track.id), :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+  <%= button_to "Edit Track", edit_track_path(@track.id), :method => 'get', class: "btn btn-outline-primary" %><br>
+  <%= button_to "Delete Track", track_path(@track.id), :method => 'delete', class: "btn btn-outline-primary", :data => { :confirm => 'Are you sure?'} %>
 </div>

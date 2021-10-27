@@ -25,4 +25,6 @@ class CommentsController < ApplicationController
     redirect_to community_post_path(comment.id)
   end
 
+  
+
 end

@@ -18,7 +18,7 @@
 
 
 <div class="controls m-3 float-end">
-  <%= button_to "Edit Driver", edit_driver_path(@driver.id), :method => 'get' %><br>
-  <%= button_to "Delete Driver", @driver, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+  <%= button_to "Edit Driver", edit_driver_path(@driver.id), :method => 'get', class: "btn btn-outline-primary" %><br>
+  <%= button_to "Delete Driver", @driver, :method => 'delete', class: "btn btn-outline-primary", :data => { :confirm => 'Are you sure?'} %>
 </div>
 </div>

@@ -1,3 +1,4 @@
+
 <div class="jumbotron jumbotron-fluid bg-dark">
 
   <div class="jumbotron-background">
@@ -23,29 +24,20 @@ For IE support of object-fit add this to your document
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"&gt;&lt;/script&gt;
 -->
 
-<h3 class="homepage-heading">2021 Live Results: Top 10</h3>
+<h3 class="homepage-heading p-3 mb-5 text-white">2021 Season Live Results: Top 10</h3>
+<div>
 <% drivers10 = @drivers.first(10) %>
 <% drivers10.each do |driver| %>
   <%# <%= image_tag driver.image, :class => 'feature' if driver.image.present? %>
-  <p class = "driver pb-4">
-    <%= link_to image_tag(driver.image, :class => 'driver_thumb'), driver_path(driver.id) %><br>
+  <h5 class = "driver pb-4">
+    <%= link_to image_tag(driver.image, :class => 'driver_thumb pb-3'), driver_path(driver.id) %><br>
     <%= link_to driver.name, driver_path(driver.id) %><br>
     Current Season Ranking: <%= driver.current_ranking %>
-  </p>
-
+  </h5>
 <% end %>
+</div>
 
 
-
-<!-- <p>
-  <#% @driver_data.each do |driver| %>
-    <h4>
-      <#%= driver["driver_name"] %>
-      <#%=  %>
-    </h4>
-  <#% end %> -->
-
-  <!-- <strong>Driver:</strong> <#%= @driver_name %><br>
-  <strong>Current Position:</strong> <%#= @driver_position %><br>
-  <strong>Season Points:</strong> <%#= @driver_points %> -->
-<!-- </p> -->
+<div style="text-align: center;" class="m-6 pb-5" >
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/g-NUz0pQC0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
