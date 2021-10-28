@@ -6,7 +6,7 @@
         <% if account_signed_in? %>
         <div class="dropdown show">
           <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= current_account.full_name %>
+            Welcome: <%= current_account.full_name %>
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -22,7 +22,7 @@
         <% end %>
       </div>
         <a href="/"><img class="home-logo" src="https://logodownload.org/wp-content/uploads/2016/11/formula-1-logo-7.png" alt=""></a>
-      <p class="h5 mb-4 text-center"><%= link_to "Discussion Forum", public_index_path %> | <%= link_to "2021 Drivers", drivers_path %> | <%= link_to "2021 Circuits", tracks_path %></p>
+      <p class="h5 mb-4 text-center"><%= link_to "The Discussion Forum", public_index_path %> | <%= link_to "2021 Drivers", drivers_path %> | <%= link_to "2021 Circuits", tracks_path %></p>
     </div>
 
   </div>
