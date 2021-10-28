@@ -1,0 +1,9 @@
+<h1 class="mb-5">Search results:</h1>
+
+<% @posts.each do |post| %>
+  <h4><strong>Post title:</strong> <%= link_to post.title, post_path(post.id)%></h4><br>
+  <p><%= post.body %></p>
+  <h6>Posted by: <%= post.account.username.capitalize %></h6>
+  <h6>Community: <%= post.community.name.capitalize %></h6>
+  <h6>Created at: <%= post.created_at.strftime("%d/%m/%Y") %></h6>
+<% end %>

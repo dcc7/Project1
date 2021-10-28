@@ -1,9 +1,15 @@
 body {
   text-align: center;
   /* list-style-position: inside; */
-  min-height: 100vh;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
   margin: 0;
   padding: 0;
+}
+
+.footers {
+  margin-top: auto !important;
 }
 
 .the-body {
@@ -25,6 +31,20 @@ body {
 
 .navbar {
   background-color: #D51212;
+}
+
+.search-box {
+  width: 450px;
+  height: 27px;
+  padding-bottom: 5px;
+  padding-top: 4px;
+  margin-left: 125px;
+  border-width: thin;
+  border-radius: 7px;
+}
+
+.search-button {
+  background-color: #4CAF50;
 }
 
 /* Home Page */

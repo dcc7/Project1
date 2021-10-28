@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   def index
     @communities = Post.all
+    @posts = Post.search(params[:search])
   end
 
   def show
