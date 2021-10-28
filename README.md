@@ -1,7 +1,7 @@
 # README - Everything F1
 
 ## Summary
-This project aims to build a web application, using Ruby on Rails. Everything F1 - is a web application where users can join and subscribe to communities to discuss F1 related matters.
+This project aims to build a web application, using Ruby on Rails. Everything F1 - is a web application where users can join and subscribe to communities to discuss F1 related matters. This project was built in approximately one week as part of the software engineering immersive program at General Assembly.
 
 ## Technologies Used
 
@@ -35,6 +35,7 @@ The overall layout aimed to design a simple yet intuitive layout.
 
 - Formatting with the footer on each page.
 - Handling comment edits/deletions.
+- Unsubscribing from communities.
 - Including a chatbox API.
 
 ## Heroku Live Site Demo
