@@ -1,4 +1,4 @@
-# README
+# README - Everything F1
 
 ## Summary
 This project aims to build a web application, using Ruby on Rails. Everything F1 - is a web application where users can join and subscribe to communities to discuss F1 related matters.
