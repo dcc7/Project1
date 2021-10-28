@@ -33,10 +33,9 @@ The overall layout aimed to design a simple yet intuitive layout.
 
 ## Future Improvements
 
-- Formatting with the footer on each page.
+- Formatting associated with the footer.
 - Handling comment edits/deletions.
 - Unsubscribing from communities.
-- Including a chatbox API.
 
 ## Heroku Live Site Demo
 
