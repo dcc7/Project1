@@ -44,3 +44,7 @@ EverythingF1: (https://projectoneformulaone.herokuapp.com/)
 
 Please feel free to pull request! Any suggestions for this project or code would be appreciated.
 
+**Login details:**
+Username: craigsy@ga.co
+Password: chicken
+
