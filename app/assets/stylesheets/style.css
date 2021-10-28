@@ -18,6 +18,11 @@ body {
 .navigation {
 }
 
+.topbar {
+  background-color: #DD2D2D;
+  color: #DD2D2D;
+}
+
 /* Home Page */
 
 .homepage-heading {
