@@ -39,7 +39,9 @@ body {
   padding-bottom: 6px;
   padding-top: 4px;
   margin-left: 125px;
+  margin-right: 3px;
   border-width: thin;
+  border-color: navy;
 }
 
 .search-button {

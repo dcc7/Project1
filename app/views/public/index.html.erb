@@ -16,7 +16,7 @@
       <!-- Search bar goes here -->
 
                 <%= form_tag posts_path, :class => "mb-4 float-start" , :method => 'get' do %>
-                  <%= text_field_tag :search, params[:search], :class => "search-box", :placeholder => "  Search all posts" %>
+                  <%= text_field_tag :search, params[:search], :class => "search-box rounded", :placeholder => "  Search all posts" %>
                   <%= submit_tag "Search", :class => "search-button btn btn-outline-primary"%>
                 <% end %>
 
