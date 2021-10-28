@@ -19,8 +19,12 @@ body {
 }
 
 .topbar {
-  background-color: #DD2D2D;
-  color: #DD2D2D;
+  background-color: black;
+  color: black;
+}
+
+.navbar {
+  background-color: #D51212;
 }
 
 /* Home Page */
