@@ -31,7 +31,8 @@ body {
 
 .homepage-heading {
   text-align: center;
-  background-color: #DD2D2D;
+  /* background-color: #DD2D2D; */
+  background-color: #04137A;
 }
 
 .driver {

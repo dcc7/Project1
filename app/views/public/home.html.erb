@@ -23,18 +23,19 @@
 For IE support of object-fit add this to your document
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"&gt;&lt;/script&gt;
 -->
-
-<h3 class="homepage-heading p-3 mb-5 text-white">2021 Season Live Results: Top 10</h3>
-<div>
-<% drivers10 = @drivers.first(10) %>
-<% drivers10.each do |driver| %>
-  <%# <%= image_tag driver.image, :class => 'feature' if driver.image.present? %>
-  <h5 class = "driver pb-4">
-    <%= link_to image_tag(driver.image, :class => 'driver_thumb pb-3'), driver_path(driver.id) %><br>
-    <%= link_to driver.name, driver_path(driver.id) %><br>
-    Current Season Ranking: <%= driver.current_ranking %>
-  </h5>
-<% end %>
+<div class="homebackground">
+  <h3 class="homepage-heading p-3 mb-5 text-white">2021 Season Live Results: Top 10</h3>
+  <div>
+  <% drivers10 = @drivers.first(10) %>
+  <% drivers10.each do |driver| %>
+    <%# <%= image_tag driver.image, :class => 'feature' if driver.image.present? %>
+    <h5 class = "driver pb-4">
+      <%= link_to image_tag(driver.image, :class => 'driver_thumb pb-3'), driver_path(driver.id) %><br>
+      <%= link_to driver.name, driver_path(driver.id) %><br>
+      Current Season Ranking: <%= driver.current_ranking %>
+    </h5>
+  <% end %>
+  </div>
 </div>
 
 
