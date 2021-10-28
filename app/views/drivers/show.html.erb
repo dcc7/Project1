@@ -10,9 +10,10 @@
     <li><strong>Points Total:</strong> <%= @driver.points %></li>
     <li><strong>Podiums:</strong> <%= @driver.podiums %></li>
     <li><strong>Current Ranking:</strong> <%= @driver.current_ranking %></li><br>
-    <p><%= @driver.bio %></p>
+    <p><%= @driver.bio %></p><br>
+    <h5>2021 Victories</h5>
     <% @driver.tracks.each do |track| %>
-      <li>Last Track Victor: <%= link_to track.name, track  %></li>
+      <li><%= link_to track.name, track  %></li>
     <% end %>
   </ul>
 
