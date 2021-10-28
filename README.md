@@ -16,7 +16,8 @@ This project aims to build a web application, using Ruby on Rails. Everything F1
 Users can sign up for a profile and sign in order to access the dicussion forum. Users are able to create their own community/post/comments with other users.
 
 ## Models
-!(/Domain Model.png)
+![image](https://user-images.githubusercontent.com/58867358/139190508-67dd73a5-da68-424e-9b77-f7097a3a9bb0.png)
+
 
 ## Design Layout - CSS
 The overall layout aimed to design a simple yet intuitive layout. 
