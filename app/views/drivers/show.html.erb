@@ -11,9 +11,11 @@
     <li><strong>Podiums:</strong> <%= @driver.podiums %></li>
     <li><strong>Current Ranking:</strong> <%= @driver.current_ranking %></li><br>
     <p><%= @driver.bio %></p><br>
-    <h5>2021 Victories</h5>
-    <% @driver.tracks.each do |track| %>
-      <li><%= link_to track.name, track  %></li>
+    <% if @driver.tracks.present?  %>
+      <h5>2021 Victories</h5>
+      <% @driver.tracks.each do |track| %>
+        <li><%= link_to track.name, track  %></li>
+      <% end %>
     <% end %>
   </ul>
 
