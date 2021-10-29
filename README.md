@@ -19,7 +19,7 @@ Users can sign up for a profile and sign in order to access the dicussion forum.
 ![image](https://user-images.githubusercontent.com/58867358/139190508-67dd73a5-da68-424e-9b77-f7097a3a9bb0.png)
 
 
-## Design Layout - CSS
+## Design Layout - CSS & Bootstrap
 The overall layout aimed to design a simple yet intuitive layout. 
 
 ## Features
