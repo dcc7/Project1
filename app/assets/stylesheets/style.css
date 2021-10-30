@@ -62,23 +62,18 @@ body {
 }
 
 /* Youtube video on home page */
-.embed-youtube {
+.iframe-container{
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%;
-  padding-top: 30px;
   height: 0;
-  overflow:hidden;
 }
-
-.embed-youtube iframe,
-.embed-youtube object,
-.embed-youtube embed {
-  border: 0;
+.iframe-container iframe{
   position: absolute;
-  top: 0;
+  bottom:0;
   left: 0;
   width: 100%;
-  height: 100%;  
+  height: 100%;
 }
 
 /* Track and Driver page. */
