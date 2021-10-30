@@ -61,6 +61,15 @@ body {
 
 }
 
+/* Youtube video on home page */
+.embed-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow:hidden;
+}
+
 /* Track and Driver page. */
 .feature {
   max-width: 35%;
@@ -96,9 +105,10 @@ body {
   margin: 0 auto;
 }
 .thumb {
-  max-width: 800px;
-  display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  /* display: block;
+  margin: 0 auto; */
 }
 
 .driver-profile {

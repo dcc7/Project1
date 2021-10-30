@@ -7,6 +7,12 @@ class SubscriptionsController < ApplicationController
     redirect_to community_path(@subscription.community_id)
   end
 
+  def destroy
+    subscription = Subscription.find params[:id]
+    subscription.destroy
+    redirect_to root_path
+  end
+
   def subscription_params
     params.require(:subscription).permit(:community_id)
   end
