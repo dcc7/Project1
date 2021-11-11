@@ -3,6 +3,16 @@
 ## Summary
 This project aims to build a web application, using Ruby on Rails. Everything F1 - is a web application where users can join and subscribe to communities to discuss F1 related matters. This project was built in approximately one week as part of the software engineering immersive program at General Assembly.
 
+## Heroku Live Site Demo
+
+EverythingF1: (https://projectoneformulaone.herokuapp.com/)
+
+Please feel free to pull request! Any suggestions for this project or code would be appreciated.
+
+**Login details:**  
+Username: craigsy@ga.co  
+Password: chicken
+
 ## Technologies Used
 
 - Ruby 2.7.4
@@ -36,14 +46,4 @@ The overall layout aimed to design a simple yet intuitive layout.
 - Formatting associated with the footer.
 - Handling comment edits/deletions.
 - Unsubscribing from communities.
-
-## Heroku Live Site Demo
-
-EverythingF1: (https://projectoneformulaone.herokuapp.com/)
-
-Please feel free to pull request! Any suggestions for this project or code would be appreciated.
-
-**Login details:**  
-Username: craigsy@ga.co  
-Password: chicken
 
